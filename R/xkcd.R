@@ -78,6 +78,7 @@ validate_xkcd <- function(x) {
 #' active graphics device
 #'
 #' @param x An [`xkcd`] object
+#' @param ... Currently ignore
 #'
 #' @importFrom tools file_ext
 #' @importFrom utils download.file
@@ -86,7 +87,7 @@ validate_xkcd <- function(x) {
 #' @importFrom grid grid.raster
 #'
 #' @exportS3Method
-plot.xkcd <- function(x) {
+plot.xkcd <- function(x, ...) {
 
   img_type <- tools::file_ext(x$img)
 
